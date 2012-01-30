@@ -1,0 +1,192 @@
+/*
+Theme Name: White
+Theme URI: http://jshamsul.dev/
+Description: jShamsul.com theme
+Author: J Shamsul Bahri
+Version: 2.0
+Tags: White, HTML5
+*/
+
+
+// -- import initial stylesheets --
+@import "reset.scss";
+@import "mixins.scss";
+@import "base.scss";
+
+
+// -- variables --
+$textcolor: #333;
+
+$twittercolor: #31c5f6;
+$facebookcolor: #3b5997;
+
+//$link: #00b4f4;
+$link: #336699;
+$linkhover: #ff0086;
+
+$serif: "TeX Gyre Schola","Georgia","Bitstream Charter","Century Schoolbook L","Liberation Serif","Times",serif;
+$sansserif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$monospace: monospace, sans-serif;
+
+
+// -- typography styles
+body {
+	padding: 10px;
+	color: $textcolor;
+	text-align: center;
+	font-family: $sansserif;
+	font-size: 15px;
+	line-height: 22px;
+	-webkit-font-smoothing: antialiased;
+}
+pre, code, kbd, samp { font-family: $monospace; }
+
+
+// -- basic styles --
+a, a:active, a:visited { color: $link; text-decoration: none; }
+a:hover { color: $linkhover; }
+a:hover, a:active { outline: none; }
+
+// -- page structure --
+.bodyContainer {
+	width: 980px;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 50px;	
+}
+
+.contentContainer {
+	overflow: hidden;
+	width: 860px;
+	float: right;
+	text-align: left;
+	padding-top: 22px;
+	
+	.content {
+		width: 560px;
+		float: left;
+		
+		h1 {
+			font-size: 27px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 33px;
+			color: #292929;
+			margin-bottom: 15px;
+			p { margin-bottom: 0px; }
+		}
+		
+		h1.bigLabel {
+			font-size: 37px;
+			padding-bottom: 20px;
+			margin-bottom: 10px;
+			border-bottom: 1px solid lighten($textcolor, 75%);
+		}
+		
+		p { margin-bottom: 15px; }
+		
+		.post {
+			overflow: hidden;
+			padding-bottom: 20px;
+			margin-bottom: 10px;
+			border-bottom: 1px solid lighten($textcolor, 75%);
+			.postTitle {
+				width: 400px;
+				float: left;
+			}
+			.postMeta {
+				width: 100px;
+				float: right;
+				font-size: 11px;
+				text-align: right;
+				span.postDate {  
+					padding: 3px 8px 5px 8px;
+					color: #f4f4f4;
+					background-color: $textcolor;
+					border-radius: 20px;
+					-moz-border-radius: 20px;
+					-webkit-border-radius: 20px;
+				}
+			}
+		}
+		
+		.postQuote {
+			
+			.quoteText {
+				font-family: $serif;
+				font-size: 27px;
+				font-style: italic;
+				p { margin-bottom: 10px; }
+				margin-bottom: -5px;
+			}
+			
+			.quoteFrom {
+				
+			}
+		}
+	}
+	
+	.sidebarContainer {
+		width: 300px;
+		float: right;
+		
+		.sidebarPanel {
+			padding-bottom: 10px;
+			border-bottom: 1px solid lighten($textcolor, 75%);
+		}
+		
+		.socialButtons {
+			overflow: hidden;
+			font-size: 11px;
+			line-height: 13px;
+			
+			img { float: left; margin-right: 10px; }
+			span { display: block; }
+			span.bold { font-weight: bold; }
+			
+			.rss {
+				width: 130px;
+				float: left;
+			}
+			
+			.twitter {
+				width: 130px;
+				float: left;
+			}
+		}
+	}
+}
+
+.navigationContainer {
+	text-align: left;
+	width: 100px;
+	float: left;
+	
+	.logoContainer { margin-bottom: 20px; }
+	.menu {
+		ul {
+			list-style: none outside;
+			padding: 0px;
+			margin: 0px;
+			li {
+				margin-bottom: 10px;
+				a {
+					display: block;
+					text-transform: capitalize;
+					font-weight: bold;
+					padding: 5px 10px 7px 10px;
+					border-bottom: 1px solid lighten($textcolor, 75%);
+					color: lighten($link, 20%);
+					&:hover { color: $link; }
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+// -- import final stuff --
+@import "validation.scss";
+@import "clearfix.scss";
