@@ -49,7 +49,7 @@ a:hover, a:active { outline: none; }
 
 // -- page structure --
 .bodyContainer {
-	width: 980px;
+	width: 1000px;
 	margin: auto;
 	overflow: hidden;
 	margin-top: 50px;	
@@ -57,7 +57,7 @@ a:hover, a:active { outline: none; }
 
 .contentContainer {
 	overflow: hidden;
-	width: 860px;
+	width: 890px;
 	float: right;
 	text-align: left;
 	padding-top: 22px;
@@ -65,6 +65,7 @@ a:hover, a:active { outline: none; }
 	.content {
 		width: 560px;
 		float: left;
+		margin-right: 30px;
 		
 		h1 {
 			font-size: 27px;
@@ -87,41 +88,33 @@ a:hover, a:active { outline: none; }
 		
 		.post {
 			overflow: hidden;
-			padding-bottom: 20px;
+			padding-bottom: 10px;
 			margin-bottom: 10px;
 			border-bottom: 1px solid lighten($textcolor, 75%);
-			.postTitle {
-				width: 400px;
-				float: left;
-			}
-			.postMeta {
-				width: 100px;
-				float: right;
-				font-size: 11px;
-				text-align: right;
-				span.postDate {  
-					padding: 3px 8px 5px 8px;
-					color: #f4f4f4;
-					background-color: $textcolor;
-					border-radius: 20px;
-					-moz-border-radius: 20px;
-					-webkit-border-radius: 20px;
-				}
-			}
-		}
-		
-		.postQuote {
 			
-			.quoteText {
-				font-family: $serif;
-				font-size: 27px;
-				font-style: italic;
-				p { margin-bottom: 10px; }
-				margin-bottom: -5px;
-			}
-			
-			.quoteFrom {
+			.postHeader {
+				overflow: hidden;
 				
+				.postTitle {
+					width: 400px;
+					float: left;
+					a { &:hover { color: #000; } }
+				}
+				
+				.postMeta {
+					width: 100px;
+					float: right;
+					font-size: 11px;
+					text-align: right;
+					span.postDate {  
+						padding: 3px 8px 5px 8px;
+						color: $textcolor;
+						background-color: lighten($textcolor, 70%);
+						border-radius: 20px;
+						-moz-border-radius: 20px;
+						-webkit-border-radius: 20px;
+					}
+				}
 			}
 		}
 	}
@@ -159,7 +152,7 @@ a:hover, a:active { outline: none; }
 
 .navigationContainer {
 	text-align: left;
-	width: 100px;
+	width: 90px;
 	float: left;
 	
 	.logoContainer { margin-bottom: 20px; }
@@ -173,9 +166,9 @@ a:hover, a:active { outline: none; }
 				a {
 					display: block;
 					text-transform: capitalize;
+					text-align: right;
 					font-weight: bold;
-					padding: 5px 10px 7px 10px;
-					border-bottom: 1px solid lighten($textcolor, 75%);
+					padding: 0px 25px 0px 0px;
 					color: lighten($link, 20%);
 					&:hover { color: $link; }
 				}

@@ -17,14 +17,14 @@ get_header(); ?>
 			<!-- content start -->
 			<div class="content">
 				
-				<h1 class="bigLabel">Blog.</h1>
+				<!--<h1 class="bigLabel">Blog.</h1>-->
 				
 				<?php if(have_posts()) : ?>
 				
 					<?php /* Start the Loop */ ?>
 					<?php while(have_posts()) : the_post(); ?>
 					
-						<?php get_template_part('content', get_post_format()); ?>
+						<?php get_template_part('content'); ?>
 						
 					<?php endwhile; ?>
 				
