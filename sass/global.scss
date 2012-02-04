@@ -110,6 +110,15 @@ a:hover, a:active { outline: none; }
 		padding: 20px 0px 20px 0px;
 		span { display: block; } 
 	}
+	
+	.prettyprint {
+		font-size: 12px;
+		margin-bottom: 15px;
+		-webkit-font-smoothing: none;
+		ol {
+			list-style-position: inside;
+		}
+	}
 }
 
 
@@ -232,6 +241,34 @@ a:hover, a:active { outline: none; }
 	}
 }
 
+// -- previous and next page 
+.previousNextContainer {
+	overflow: hidden;
+	margin-bottom: 40px;
+	.linkButton {
+		overflow: hidden;
+		a {
+			display: block;
+			padding: 5px 15px 6px 15px;
+			background-color: lighten($textcolor, 70%);
+			color: $textcolor;
+			border-radius: 40px;
+			-moz-border-radius: 40px;
+			-webkit-border-radius: 40px;
+			&:hover {
+				background-color: lighten($textcolor, 10%);
+				color: lighten($textcolor, 80%);
+			}
+		}
+	}
+	
+	.previous { 
+		float: left; 
+	}
+	.next { 
+		float: right; 
+	}
+}
 
 // --  archive styles ---
 ul.archiveYearList {

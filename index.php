@@ -25,6 +25,12 @@ get_header(); ?>
 						<?php get_template_part('content'); ?>
 						
 					<?php endwhile; ?>
+					
+					<!-- previous and next navigation container start -->
+					<div class="previousNextContainer">
+						<span class="previous linkButton"><?php next_posts_link(__('<span class="arrow">&larr;</span> Older posts', 'wp-jshamsul')); ?></span>
+						<span class="next linkButton"><?php previous_posts_link(__('Newer posts <span class="arrow">&rarr;</span>', 'wp-jshamsul')); ?> </span>
+					</div><!-- previous and next navigation container ends -->
 				
 				<?php else : ?>
 					

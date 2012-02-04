@@ -4,7 +4,7 @@
 	<div class="sidebarContainer">
 			
 		<!-- sidebar panel start -->
-		<?php // needs to be a wp_nav_menu option? ?>
+		<?php // -- needs to be a wp_nav_menu option? ?>
 		<div class="sidebarPanel socialButtons">
 				
 			<div class="socialItem rss">
@@ -42,7 +42,7 @@
 		</div><!-- sidebar panel ends -->
 		
 		<!-- sidebar panel start -->
-		<?php // this needs to be able to be translated... ?>
+		<?php // -- this needs to be able to be translated... ?>
 		<div class="sidebarPanel postInformation">
 			<p>This entry was posted on <span class="date"><?php the_time('F j, Y'); ?></span> at <span class="time"><?php the_time('g:i a'); ?></span> filed under <?php the_category(', '); ?><?php the_tags(' and tagged with ', ', ', ''); ?>.</p> 
 			<p>You can <a href="#comments">leave a response</a> to this entry.</p>
