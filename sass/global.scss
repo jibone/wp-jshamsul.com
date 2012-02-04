@@ -273,25 +273,23 @@ ul.archiveYearList {
 	margin-top: 50px;	
 	
 	.logoContainer { margin-bottom: 20px; }
-	.menu-primary-container {
-		ul {
-			list-style: none outside;
-			padding: 0px;
-			margin: 0px;
-			li {
-				margin-bottom: 10px;
-				a {
-					display: block;
-					text-transform: capitalize;
-					text-align: right;
-					font-weight: bold;
-					padding: 0px 25px 0px 0px;
-					color: lighten($link, 20%);
-					&:hover { color: $link; }
-				}
+	ul.menu {
+		list-style: none outside;
+		padding: 0px;
+		margin: 0px;
+		li {
+			margin-bottom: 10px;
+			a {
+				display: block;
+				text-transform: capitalize;
+				text-align: right;
+				font-weight: bold;
+				padding: 0px 25px 0px 0px;
+				color: lighten($link, 20%);
+				&:hover { color: $link; }
 			}
 		}
-	}
+	}	
 }
 
 #sticky.stick {
