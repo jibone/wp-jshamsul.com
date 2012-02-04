@@ -14,18 +14,22 @@ get_header(); ?>
 			<!-- content start -->
 			<div class="content">
 				<div class="postContainer">
-				
-				<div class="postHeader">
-					<div class="postTitle">
-						<h1><?php the_title(); ?></h1>
+					
+					<div class="postHeader">
+						<div class="postTitle">
+							<h1><?php the_title(); ?></h1>
+						</div>
 					</div>
-				</div>
-		
-				<div class="postBody">
-			
-					<?php the_post(); the_content(__('')); ?>
-		
-				</div>				
+				
+					<div class="postBody">
+					
+						<?php the_post(); the_content(); ?>
+				
+					</div>
+				
+					<div class="contentFooter">
+						<a href="<?php bloginfo('url'); ?>/blog"><?php _e('Back to the blog', 'wp-jshamsul'); ?> &rarr;</a>
+					</div>
 				
 				</div>
 			</div><!-- content ends -->

@@ -47,16 +47,18 @@ if(!function_exists('get_the_content_first_paragraph')) :
 		
 		// -- check if first paragraph is an image or video embed and ignore it
 		// -- go for the second paragraph instead.
-		$c = 0; $p = count($content_explode);
+		$c = 0; $p = count($content_explode); $return_data = "";
 		while($c < $p) {
 			$test = strip_tags($content_explode[$c]);
 			if($test != '') {
-				$return_paragraph = $c;
+				$return_data = $return_data . "<p>" . $content_explode[$c] . "</p>\n";
 				break;
+			} else {
+				$return_data = $return_data ."<p>" . $content_explode[$c] . "</p>\n";
 			} $c++;
 		}
 		
-		return $content_explode[$return_paragraph];
+		return $return_data;
 	}
 endif;
 

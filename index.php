@@ -17,8 +17,6 @@ get_header(); ?>
 			<!-- content start -->
 			<div class="content">
 				
-				<!--<h1 class="bigLabel">Blog.</h1>-->
-				
 				<?php if(have_posts()) : ?>
 				
 					<?php /* Start the Loop */ ?>
@@ -49,5 +47,6 @@ get_header(); ?>
 		<?php  get_template_part('navigation'); ?>
 		
 	</div><!-- page container ends -->
+	<div id="sticky-bottom"></div>
 
 <?php get_footer(); ?>

@@ -5,7 +5,7 @@
 // -- Always force a scrollbar in non-IE --
 html { overflow-y: scroll; }
 a:hover, a:active { outline: none; }
-ul, ol { margin-left: 2em; }
+ul, ol { margin-left: 0px; }
 ol { list-style-type: decimal; }
 nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
 small { font-size: 85%; }
@@ -29,6 +29,9 @@ button, input, select, textarea { margin: 0; }
 a:link { -webkit-tap-highlight-color: #FF5E99; }
 button {  width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
 // -- Print styles. --
 @media print {

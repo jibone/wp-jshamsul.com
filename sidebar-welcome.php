@@ -54,22 +54,6 @@
 					</div>
 				</div>
 				
-				<div class="socialItem lastfm">
-					<img src="<?php bloginfo('stylesheet_directory') ?>/images/last-fm.png" />
-					<div class="text">
-						<span class="bold"><?php _e('Last.FM', 'wp-jshamsul'); ?></span>
-						<span class="normal"><a href="http://last.fm/jibone"><?php _e('Listen to', 'wp-jshamsul'); ?></a></span>
-					</div>
-				</div>
-				
-				<div class="socialItem flickr">
-					<img src="<?php bloginfo('stylesheet_directory') ?>/images/connect.png" />
-					<div class="text">
-						<span class="bold"><?php _e('Jiboneus', 'wp-jshamsul'); ?></span>
-						<span class="normal"><a href="http://jiboneus"><?php _e('Webzine', 'wp-jshamsul'); ?></a></span>
-					</div>
-				</div>
-				
 				<div class="socialItem mail">
 					<img src="<?php bloginfo('stylesheet_directory') ?>/images/mail.png" />
 					<div class="text">

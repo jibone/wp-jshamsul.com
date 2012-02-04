@@ -1,13 +1,3 @@
-/*
-Theme Name: White
-Theme URI: http://jshamsul.dev/
-Description: jShamsul.com theme
-Author: J Shamsul Bahri
-Version: 2.0
-Tags: White, HTML5
-*/
-
-
 // -- import initial stylesheets --
 @import "reset.scss";
 @import "mixins.scss";
@@ -41,7 +31,6 @@ body {
 }
 pre, code, kbd, samp { font-family: $monospace; }
 
-
 // -- basic styles --
 a, a:active, a:visited { color: $link; text-decoration: none; }
 a:hover { color: $linkhover; }
@@ -52,111 +41,239 @@ a:hover, a:active { outline: none; }
 	width: 1000px;
 	margin: auto;
 	overflow: hidden;
-	margin-top: 50px;	
 }
 
+// -- content --
 .contentContainer {
 	overflow: hidden;
-	width: 890px;
+	width: 900px;
 	float: right;
 	text-align: left;
 	padding-top: 22px;
-	
+	margin-top: 50px;	
 	.content {
-		width: 560px;
+		width: 570px;
 		float: left;
 		margin-right: 30px;
-		
-		h1 {
-			font-size: 27px;
-			font-style: normal;
-			font-weight: 300;
-			line-height: 33px;
-			color: #292929;
-			margin-bottom: 15px;
-			p { margin-bottom: 0px; }
+	}
+	
+	h1 {
+		font-size: 27px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 33px;
+		color: #292929;
+		p { margin-bottom: 0px; }
+	}		
+	p { margin-bottom: 15px; }
+	
+	h1.bigTitle {
+		margin-bottom: 40px;
+	}
+	
+}
+
+// -- post styles
+.postContainer {
+	overflow: hidden;
+	margin-bottom: 40px;
+	
+	.postHeader {
+		overflow: hidden;
+		margin-bottom: 15px;
+		 		
+		.postTitle {
+			width: 400px;
+			float: left;
+			a { &:hover { color: #000; } }
 		}
-		
-		h1.bigLabel {
-			font-size: 37px;
-			padding-bottom: 20px;
-			margin-bottom: 10px;
-			border-bottom: 1px solid lighten($textcolor, 75%);
-		}
-		
-		p { margin-bottom: 15px; }
-		
-		.post {
-			overflow: hidden;
-			padding-bottom: 10px;
-			margin-bottom: 10px;
-			border-bottom: 1px solid lighten($textcolor, 75%);
-			
-			.postHeader {
-				overflow: hidden;
 				
-				.postTitle {
-					width: 400px;
-					float: left;
-					a { &:hover { color: #000; } }
-				}
-				
-				.postMeta {
-					width: 100px;
-					float: right;
-					font-size: 11px;
-					text-align: right;
-					span.postDate {  
-						padding: 3px 8px 5px 8px;
-						color: $textcolor;
-						background-color: lighten($textcolor, 70%);
-						border-radius: 20px;
-						-moz-border-radius: 20px;
-						-webkit-border-radius: 20px;
-					}
-				}
+		.postMeta {
+			width: 100px;
+			float: right;
+			font-size: 11px;
+			line-height: 20px;
+			text-align: right;
+			span.postDate {  
+				padding: 3px 8px 5px 8px;
+				color: $textcolor;
+				background-color: lighten($textcolor, 70%);
+				border-radius: 20px;
+				-moz-border-radius: 20px;
+				-webkit-border-radius: 20px;
 			}
 		}
 	}
 	
-	.sidebarContainer {
-		width: 300px;
-		float: right;
-		
-		.sidebarPanel {
-			padding-bottom: 10px;
-			border-bottom: 1px solid lighten($textcolor, 75%);
+	.postNavigation {
+		overflow: hidden;
+		padding: 20px 0px 20px 0px;
+		span { display: block; } 
+	}
+}
+
+
+// -- comments --
+.commentsContainer {
+	#reply-title { display: none; }
+	h1 { margin-bottom: 40px; }
+	
+	ul.commentListContainer {
+		overflow: hidden;
+		list-style: none outsite;
+		padding: 0px;
+		margin: 0px;
+		li {
+			margin-bottom: 45px;
+			.vcard { img { float: left; margin-right: 10px; } }
+			.fn { font-size: 18px; }
+			.comment-awaiting-moderation,
+			.comment-meta { font-size: 11px; line-height: 13px; }
+			p { clear: both; margin-bottom: 6px; }
+			.reply { display: none; }
 		}
+	}
+	
+	.commentForm { margin-top: 30px; }
+	
+	form {
+		overflow: hidden;
 		
-		.socialButtons {
+		p.comment-form-author, 
+		p.comment-form-email, 
+		p.comment-form-url {
 			overflow: hidden;
+			width: 190px;
+			float: left;
 			font-size: 11px;
-			line-height: 13px;
-			
-			img { float: left; margin-right: 10px; }
-			span { display: block; }
-			span.bold { font-weight: bold; }
-			
-			.rss {
-				width: 130px;
-				float: left;
+			text-transform: uppercase;
+			input { width: 180px; }
+		}
+		p.comment-form-comment {
+			clear: both;
+			font-size: 11px;
+			text-transform: uppercase;
+		}
+		p.form-submit {
+			input#submit {
+				border: none;
+				font-size: 12px;
+				padding: 3px 15px 4px 15px;
+				background-color: lighten($textcolor, 70%);
+				border-radius: 30px;
+				-moz-border-radius: 30px;
+				-webkit-border-radius: 30px;
+				&:hover {
+					background-color: lighten($textcolor, 20%);
+					color: #f4f4f4;
+				}
 			}
-			
-			.twitter {
-				width: 130px;
-				float: left;
+		}
+		p.form-allowed-tags { font-size: 12px; }
+		input { 
+			display: block;
+			outline: none;
+			font-size: 16px;
+			padding: 3px;
+			color: lighten($textcolor, 10%);
+			border: 1px solid lighten($textcolor, 60%);
+			&:focus {
+				border: 1px solid lighten($textcolor, 40%);
+			}
+		}
+		textarea { 
+			display: block; 
+			width: 560px;
+			outline: none;
+			color: lighten($textcolor, 10%);
+			border: 1px solid lighten($textcolor, 60%);
+			&:focus {
+				border: 1px solid lighten($textcolor, 40%);
 			}
 		}
 	}
 }
 
+// -- sidebar container --
+.sidebarContainer {
+	width: 300px;
+	float: right;
+		
+	.sidebarPanel {
+		padding-bottom: 10px;
+	}
+		
+	.socialButtons {
+		overflow: hidden;
+		font-size: 11px;
+		line-height: 13px;
+			
+		img { float: left; margin-right: 10px; }
+		span { display: block; }
+		span.bold { font-weight: bold; }
+			
+		.socialItem {
+			width: 130px;
+			float: left;
+			margin-bottom: 20px;
+			.text { margin-top: 3px; }
+		}
+	}
+	
+	.postInformation {
+		padding-top: 20px;
+		font-size: 12px;
+		span.date,
+		span.time {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+// --  archive styles ---
+ul.archiveYearList {
+	overflow: hidden;
+	list-style: none;
+
+	li.year {
+		overflow: hidden;
+		margin-bottom: 40px;
+		span.yearBigText { 
+			width: 160px;
+			display: block; 
+			float: left;
+			font-size: 64px;
+			font-weight: bold;
+			line-height: 66px;
+			color: lighten($textcolor, 50%); 
+		}
+		
+		ul.monthList {
+			width: 200px;
+			padding-top: 10px;
+			float: left;
+			list-style: none;
+			li {
+				a {
+					span.arrow { display: none; color: $textcolor }
+					&:hover { span.arrow { display: inline; } }
+				}
+			}
+		}
+	}
+}
+
+
+// -- left side navigation --
 .navigationContainer {
 	text-align: left;
 	width: 90px;
 	float: left;
+	margin-top: 50px;	
 	
 	.logoContainer { margin-bottom: 20px; }
-	.menu {
+	.menu-primary-container {
 		ul {
 			list-style: none outside;
 			padding: 0px;
@@ -175,9 +292,32 @@ a:hover, a:active { outline: none; }
 			}
 		}
 	}
-	
 }
 
+#sticky.stick {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+// -- footer styles --
+.footerContainer {
+	@extend .bodyContainer;
+	border-top: 1px solid lighten($textcolor, 70%);
+	text-align: left;
+	padding-top: 10px;
+	font-size: 12px;
+	overflow: hidden;
+	.copyright {
+		width: 600px;
+		float: left;
+	}
+	.navigation {
+		width: 300px;
+		float: right;
+		text-align: right;
+	}
+}
 
 
 // -- import final stuff --

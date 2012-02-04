@@ -13,18 +13,17 @@
 		
 		<div class="postBody">
 			
-			<?php 
-				if($pos = strpos($post->post_content, '<!--more-->')) :
-					the_content(__(''));
-				else :
-					echo get_the_content_first_paragraph();
-				endif;
-			?>
+			<?php the_content(__('')); ?>
 		
 		</div>
 		
+		<div class="postNavigation">
+			<span class="previous"><?php previous_post_link('Previous: %link &rarr;'); ?></span>
+			<span class="next"><?php next_post_link('Next: %link &rarr;'); ?></span>
+		</div>
+		
 		<div class="postFooter">
-			<a href="<?php the_permalink(); ?>">Continue reading &rarr;</a>
+			
 		</div>
 		
 	</div><!-- content type quote end -->
