@@ -20,7 +20,7 @@
 				} elseif($comment_number == 0) {
 					_e('Be the first to comment on &ldquo;'. get_the_title() .'&rdquo;', 'wp-jshamsul');
 				} else {
-					_e(number_format_i18n( $comment_number ) .' comments on &ldquo;'. get_the_title() .'&rdquo;', 'wp-jshamsul');
+					_e(ucfirst(convert_number(number_format_i18n($comment_number))) .' comments on &ldquo;'. get_the_title() .'&rdquo;', 'wp-jshamsul');
 				}
 			?>
 		</h1>

@@ -68,8 +68,31 @@ a:hover, a:active { outline: none; }
 	p { margin-bottom: 15px; }
 	
 	h1.bigTitle {
+		margin-bottom: 0px;
+	}
+	
+	div.return {
 		margin-bottom: 40px;
 	}
+	
+	strong { font-weight: bold; }
+	em { font-style: italic; }
+	blockquote {
+		font-family: $serif;
+		font-size: 20px;
+		font-style: italic;
+		line-height: 32px;
+		color: lighten($textcolor, 40%);
+	}
+	ol { 
+		list-style-position: inside;
+		margin-bottom: 15px;
+	}
+	ul { 
+		list-style-position: inside;
+		margin-bottom: 15px;
+	}
+	
 	
 }
 
