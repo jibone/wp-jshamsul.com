@@ -223,9 +223,11 @@ a:hover, a:active { outline: none; }
 	.postInformation {
 		padding-top: 20px;
 		font-size: 12px;
+		span.line,
 		span.date,
 		span.time {
 			text-decoration: underline;
+			color: lighten($textcolor, 20%);
 		}
 	}
 }

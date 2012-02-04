@@ -62,3 +62,98 @@ if(!function_exists('get_the_content_first_paragraph')) :
 	}
 endif;
 
+
+// -- convert numbers to words
+// -- http://www.phpro.org/examples/Convert-Numbers-to-Words.html
+if(!function_exists('convert_number')) :
+	function convert_number($number) {
+	
+		if(!is_numeric($number) || $number < 0 || ($number > 999999999)) {
+			$return = false;
+		} else {
+			
+			$Gn = floor($number / 1000000);  /* Millions (giga) */ 
+			$number -= $Gn * 1000000; 
+			$kn = floor($number / 1000);     /* Thousands (kilo) */ 
+			$number -= $kn * 1000; 
+			$Hn = floor($number / 100);      /* Hundreds (hecto) */ 
+			$number -= $Hn * 100; 
+			$Dn = floor($number / 10);       /* Tens (deca) */ 
+			$n = $number % 10;               /* Ones */ 
+			
+			$res = "";
+			
+			if($Gn) {
+				$res .= convert_numbers($Gn) . " " . __('million', 'wp-jshamsul');
+			}
+			
+			if($kn) {
+				$res .= (empty($res) ? "" : " ") . convert_number($kn) . " " . __('thousand', 'wp-jshamsul');
+			}
+			
+			if($Hn) {
+				$res .= (empty($res) ? "" : " ") . convert_number($Hn) . " " . __('hundred', 'wp-jshamsul');
+			}
+			
+			$ones = array(
+				__(""), 
+				__("one", "wp-jshamsul"),
+				__("two", "wp-jshamsul"),
+				__("three", "wp-jshamsul"),
+				__("four", "wp-jshamsul"),
+				__("five", "wp-jshamsul"),
+				__("six", "wp-jshamsul"),
+				__("seven", "wp-jshamsul"),
+				__("eight", "wp-jshamsul"),
+				__("nine", "wp-jshamsul"),
+				__("ten", "wp-jshamsul"),
+				__("eleven", "wp-jshamsul"),
+				__("twelve", "wp-jshamsul"),
+				__("thirteen", "wp-jshamsul"),
+				__("fourteen", "wp-jshamsul"),
+				__("fifteen", "wp-jshamsul"),
+				__("sixteen", "wp-jshamsul"),
+				__("seventeen", "wp-jshamsul"),
+				__("eightteen", "wp-jshamsul"),
+				__("nineteen", "wp-jshamsul"),
+			);
+			
+			$tens = array(
+				__(""), __(""), 
+				__("twenty", "wp-jshamsul"),
+				__("thirty", "wp-jshamsul"),
+				__("forty", "wp-jshamsul"),
+				__("fifty", "wp-jshamsul"),
+				__("sixty", "wp-jshamsul"),
+				__("seventy", "wp-jshamsul"),
+				__("eighty", "wp-jshamsul"),
+				__("ninety", "wp-jshamsul"), 
+			);
+			
+			if($Dn || $n) {
+				if(!empty($res)) {
+					$res .= " " . __('and', 'wp-jshamsul');
+				}
+				
+				if($Dn < 2) {
+					$res .= $ones[$Dn * 10 + $n];
+				} else {
+					$res .= $tens[$Dn];
+					if($n) {
+						$res .= "-" . $ones[$n];
+					}
+				}
+			}
+			
+			if(empty($res)) {
+				$res = __('zero', 'wp-jshamsul');
+			}
+			
+			$return = $res;
+			
+		} 
+		return $return;
+		
+	}
+endif; 
+
