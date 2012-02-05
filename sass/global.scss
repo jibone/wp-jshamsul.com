@@ -294,6 +294,9 @@ a:hover, a:active { outline: none; }
 }
 
 // --  archive styles ---
+.archiveListContainer {
+	margin-top: 50px;
+}
 ul.archiveYearList {
 	overflow: hidden;
 	list-style: none;

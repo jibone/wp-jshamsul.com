@@ -3,43 +3,7 @@
 	<!-- sidebar container start -->
 	<div class="sidebarContainer">
 			
-		<!-- sidebar panel start -->
-		<?php // -- needs to be a wp_nav_menu option? ?>
-		<div class="sidebarPanel socialButtons">
-				
-			<div class="socialItem rss">
-				<img src="<?php bloginfo('stylesheet_directory') ?>/images/rss.png" />
-				<div class="text">
-					<span class="bold"><?php _e('RSS Feed', 'wp-jshamsul'); ?></span>
-					<span class="normal"><a href="http://feeds.feedburner.com/jshamsulcom"><?php _e('Subscribe', 'wp-jshamsul'); ?></a></span>
-				</div>
-			</div>
-				
-			<div class="socialItem twitter">
-				<img src="<?php bloginfo('stylesheet_directory') ?>/images/twitter.png" />
-				<div class="text">
-					<span class="bold"><?php _e('Twitter', 'wp-jshamsul'); ?></span>
-					<span class="normal"><a href="http://twitter.com/jibone"><?php _e('Follow', 'wp-jshamsul'); ?></a></span>
-				</div>
-			</div>
-							
-			<div class="socialItem mail">
-				<img src="<?php bloginfo('stylesheet_directory') ?>/images/mail.png" />
-				<div class="text">
-					<span class="bold"><?php _e('Contact', 'wp-jshamsul'); ?></span>
-					<span class="normal"><a href="http://flickr.com/jibone"><?php _e('Contact', 'wp-jshamsul'); ?></a></span>
-				</div>
-			</div>
-				
-			<div class="socialItem fanboy">
-				<img src="<?php bloginfo('stylesheet_directory') ?>/images/apple.png" />
-				<div class="text">
-					<span class="bold"><?php _e('Apple', 'wp-jshamsul'); ?></span>
-					<span class="normal"><a href="http://apple.com"><?php _e('Fanboy', 'wp-jshamsul'); ?></a></span>
-				</div>
-			</div>
-				
-		</div><!-- sidebar panel ends -->
+		<?php  get_template_part('social-icons'); ?>
 		
 		<!-- sidebar panel start -->
 		<?php // -- this needs to be able to be translated... ?>

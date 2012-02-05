@@ -58,17 +58,18 @@
 					<img src="<?php bloginfo('stylesheet_directory') ?>/images/mail.png" />
 					<div class="text">
 						<span class="bold"><?php _e('Contact', 'wp-jshamsul'); ?></span>
-						<span class="normal"><a href="http://flickr.com/jibone"><?php _e('Contact', 'wp-jshamsul'); ?></a></span>
+						<span class="normal"><a href="<?php bloginfo('url') ?>/contact"><?php _e('Contact', 'wp-jshamsul'); ?></a></span>
 					</div>
 				</div>
 				
-				<div class="socialItem fanboy">
-					<img src="<?php bloginfo('stylesheet_directory') ?>/images/apple.png" />
+				<div class="socialItem github">
+					<img src="<?php bloginfo('stylesheet_directory') ?>/images/github.png" />
 					<div class="text">
-						<span class="bold"><?php _e('Apple', 'wp-jshamsul'); ?></span>
-						<span class="normal"><a href="http://apple.com"><?php _e('Fanboy', 'wp-jshamsul'); ?></a></span>
+						<span class="bold"><?php _e('Github', 'wp-jshamsul'); ?></span>
+						<span class="normal"><a href="http://github.com/jibone"><?php _e('Code', 'wp-jshamsul'); ?></a></span>
 					</div>
 				</div>
+				
 				
 			</div><!-- sidebar panel ends -->
 			
