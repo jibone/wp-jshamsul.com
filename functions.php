@@ -51,10 +51,10 @@ if(!function_exists('get_the_content_first_paragraph')) :
 		while($c < $p) {
 			$test = strip_tags($content_explode[$c]);
 			if($test != '') {
-				$return_data = $return_data . "<p>" . $content_explode[$c] . "</p>\n";
+				$return_data = $return_data . $content_explode[$c] . "</p>\n";
 				break;
 			} else {
-				$return_data = $return_data ."<p>" . $content_explode[$c] . "</p>\n";
+				$return_data = $return_data . $content_explode[$c] . "</p>\n";
 			} $c++;
 		}
 		
