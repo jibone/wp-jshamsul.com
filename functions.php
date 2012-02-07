@@ -7,7 +7,6 @@
 //  Copyright 2011 jShamsul.com . All rights reserved.
 // 
 
-
 // --- theme setup ---
 add_action('after_setup_theme', 'jshamsul_setup');
 if(!function_exists('jshamsul_setup')):
@@ -30,11 +29,11 @@ endif;
 
 
 // - Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
-function twentyeleven_page_menu_args( $args ) {
+function jshamsul_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'twentyeleven_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'jshamsul_page_menu_args' );
 
 
 // -- get only the first paragraph from the post --
@@ -61,6 +60,23 @@ if(!function_exists('get_the_content_first_paragraph')) :
 		return $return_data;
 	}
 endif;
+
+
+// -- replace custom logo
+if(!function_exists('custom_logo')) :
+	function custom_logo() { ?>
+		
+		<style type="text/css">
+			h1 a { 
+				background-image: url('<?php bloginfo('stylesheet_directory') ?>/images/logo.gif') !important;
+				margin-bottom: 20px !important; 
+				padding-bottom: 20px !important; 
+			}
+		</style>
+		
+	<?php }
+endif;
+add_action('login_head', 'custom_logo');
 
 
 // -- convert numbers to words
