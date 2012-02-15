@@ -38,7 +38,7 @@ add_filter( 'wp_page_menu_args', 'jshamsul_page_menu_args' );
 
 // -- get only the first paragraph from the post --
 if(!function_exists('get_the_content_first_paragraph')) :
-	function get_the_content_first_paragraph() {
+	function get_the_content_first_paragraph($include_image = true) {
 		$content = get_the_content();
 		$content = apply_filters('the_content', $content);
 		$content = str_replace(']]>', ']]&gt;', $content);
@@ -53,7 +53,9 @@ if(!function_exists('get_the_content_first_paragraph')) :
 				$return_data = $return_data . $content_explode[$c] . "</p>\n";
 				break;
 			} else {
-				$return_data = $return_data . $content_explode[$c] . "</p>\n";
+				if($include_image == true) {
+					$return_data = $return_data . $content_explode[$c] . "</p>\n";				
+				}
 			} $c++;
 		}
 		
@@ -172,4 +174,3 @@ if(!function_exists('convert_number')) :
 		
 	}
 endif; 
-

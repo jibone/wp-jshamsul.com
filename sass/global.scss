@@ -56,41 +56,35 @@ a:hover, a:active { outline: none; }
 		float: left;
 		margin-right: 30px;
 	}
-	
-	h1 {
-		font-size: 27px;
-		font-style: normal;
-		font-weight: 300;
-		line-height: 33px;
-		color: #292929;
-		p { margin-bottom: 0px; }
-	}		
-	p { margin-bottom: 15px; }
-	
-	h1.bigTitle {
-		margin-bottom: 0px;
-	}
-	
-	div.return {
-		margin-bottom: 40px;
-	}
-	
-	strong { font-weight: bold; }
-	em { font-style: italic; }
-	blockquote {
-		font-family: $serif;
-		font-size: 20px;
-		font-style: italic;
-		line-height: 32px;
-		color: lighten($textcolor, 40%);
-	}
-	ol { 
-		list-style-position: inside;
-		margin-bottom: 15px;
-	}
-	ul { 
-		list-style-position: inside;
-		margin-bottom: 15px;
+	.postContainer {
+		h1 {
+			font-size: 27px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 33px;
+			color: #292929;
+			p { margin-bottom: 0px; }
+		}		
+		p { margin-bottom: 15px; }
+		h1.bigTitle { margin-bottom: 0px; }
+		div.return { margin-bottom: 40px; }
+		strong { font-weight: bold; }
+		em { font-style: italic; }
+		blockquote {
+			font-family: $serif;
+			font-size: 20px;
+			font-style: italic;
+			line-height: 32px;
+			color: lighten($textcolor, 40%);
+		}
+		ol { 
+			list-style-position: inside;
+			margin-bottom: 15px;
+		}
+		ul { 
+			list-style-position: inside;
+			margin-bottom: 15px;
+		}
 	}
 	
 	
@@ -128,6 +122,8 @@ a:hover, a:active { outline: none; }
 		}
 	}
 	
+	.postBody { clear: both; }
+	
 	.postNavigation {
 		overflow: hidden;
 		padding: 20px 0px 20px 0px;
@@ -156,6 +152,7 @@ a:hover, a:active { outline: none; }
 		padding: 0px;
 		margin: 0px;
 		li {
+			list-style: none outsite;
 			margin-bottom: 45px;
 			.vcard { img { float: left; margin-right: 10px; } }
 			.fn { font-size: 18px; }
