@@ -85,10 +85,16 @@ a:hover, a:active { outline: none; }
 			list-style-position: inside;
 			margin-bottom: 15px;
 		}
-	}
-	
-	
+	}	
 }
+
+h1 {
+	font-size: 27px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 33px;
+	color: #292929;
+}	
 
 // -- post styles
 .postContainer {
@@ -143,9 +149,14 @@ a:hover, a:active { outline: none; }
 
 // -- comments --
 .commentsContainer {
+	margin-bottom: 50px;
 	#reply-title { display: none; }
 	h1 { margin-bottom: 40px; }
 	
+	.commentsContent {
+		p { margin-bottom: 15px; }
+	}
+
 	ul.commentListContainer {
 		overflow: hidden;
 		list-style: none outsite;
@@ -158,16 +169,18 @@ a:hover, a:active { outline: none; }
 			.fn { font-size: 18px; }
 			.comment-awaiting-moderation,
 			.comment-meta { font-size: 11px; line-height: 13px; }
-			p { clear: both; margin-bottom: 6px; }
+			p { margin-bottom: 13px; padding-left: 58px; }
 			.reply { display: none; }
 		}
 	}
 	
 	.commentForm { margin-top: 30px; }
+	.comment-meta {
+		margin-bottom: 2px;
+	}
 	
 	form {
-		overflow: hidden;
-		
+		overflow: hidden;	
 		p.comment-form-author, 
 		p.comment-form-email, 
 		p.comment-form-url {
@@ -222,6 +235,7 @@ a:hover, a:active { outline: none; }
 		}
 	}
 }
+
 
 // -- sidebar container --
 .sidebarContainer {

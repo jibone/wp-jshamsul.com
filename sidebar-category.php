@@ -1,5 +1,3 @@
-
-
 		
 	<!-- sidebar container start -->
 	<div class="sidebarContainer">
@@ -39,5 +37,4 @@
 		</div><!-- sidebar panel ends -->
 			
 	</div><!-- sidebar container ends -->
-	
-	
+		

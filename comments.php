@@ -12,6 +12,8 @@
 		
 		<?php return; endif; ?>
 		
+		<?php if(comments_open()) : ?>
+		
 		<h1>
 			<?php
 				$comment_number = get_comments_number();
@@ -24,6 +26,12 @@
 				}
 			?>
 		</h1>
+
+		<?php else: ?>
+
+		<h1><?php _e("Do you feel the need to comment on this post?"); ?></h1>
+
+		<?php endif; ?>
 		
 		<?php if(have_comments()) : ?>
 		
@@ -38,11 +46,17 @@
 			</ul>
 		</div>
 		
-		<?php elseif(!comments_open() && !is_page() && post_type_support(get_post_type(), 'comments')) : ?>
+		<?php elseif(!comments_open() && !is_page() ) : ?>
 		
 		<!-- comments close container start  -->
 		<div class="commentsContent commentsClose">
-			<p><?php _e('Comments are close.', 'wp-jshamsul'); ?></p>
+			<p>This is my website and here on this website, freedom of speech only applies to me.</p>
+			<p>Alternatively if you do feel the need to comment on something I have written, 
+			or correct me on my mistake (which I truly appreciated), or have your rebuttal heard, 
+			you can either send an email to j@jshamsul.com or get me through either one of these 
+			channels - <a href="http://facebook.com/jshamsul">Facebook</a>, Twitter <a href="http://twitter.com/jibone">@jibone</a>, 
+			<a href="http://jibone.tumblr.com/ask">Tumblr</a> <a href="http://formspring.com">Formspring</a>. </p>
+			<p><?php //_e('Comments are close.', 'wp-jshamsul'); ?></p>
 		</div><!-- comments close container ends -->
 			
 		<?php endif; ?>
