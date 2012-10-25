@@ -18,4 +18,4 @@ build:
 
 watch:
 	@echo "Watching less files..."
-	@watchr -e "watch('less/.*\.less') { system 'make' }"
+	watchr -e "watch('less/.*\.less') { system 'recess --compile ${LESS} > ${STYLE}' }"
