@@ -12,7 +12,11 @@
     
     <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
     <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul.css" rel="stylesheet">
-    
+    <link href="<?php bloginfo('stylesheet_directory') ?>/css/icon-fonts.css" rel="stylesheet">
+    <!--[if IE 7]
+    <link href="<?php bloginfo('stylesheet_directory') ?>/css/icon-fonts-ie7.css" rel="stylesheet">
+    <![endif]-->
+  
     <link rel='alternate' type='application/rss+xml' title='<?php bloginfo('name'); ?> RSS Feed' href='' />
     <link rel='pingback' href='<?php bloginfo('pingback_url'); ?>' />
     <link rel="image_src" href="<?php bloginfo('stylesheet_directory') ?>/images/logo.png" />
@@ -29,23 +33,21 @@
   <body>
   
     <!-- header container start -->
-    <header class="row">
+    <header class="row top-header">
       <div class="container">
-        <div class="span1">
+        <section class="span1">
           <span class="icon-container">
             <a href="" class="logo"><span class="icon-text">jS</span></a>
           </span>
-        </div>
-        <div class="span8">
-          <ul class="nav nav-pills top-nav">
-            <li><a href="/">jShamsul.com</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="span3"></div>
+        </section>
+        <nav class="span8">
+          <?php wp_nav_menu(array(
+            'theme_location'  => 'header_navigation',
+            'container'       => false,
+            'items_wrap'      => '<ul id="%1$s" class="nav nav-pills top-nav">%3$s</ul>'
+          )); ?>
+        </nav>
+        <section class="span3"></section>
       </div>
     </header><!-- header container ends -->
  
