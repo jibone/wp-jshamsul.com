@@ -1,179 +1,179 @@
 /*
- *  jShamsul Main Style v3.0.0
+ *  jShamsul.com Main Style
  */
 
-// CSS reset
+// ------------------------------------------------
+// -- Importing external files --------------------
 @import "bootstrap/reset.less";
-
-// core variables andd mixins
 @import "variables.less";
 @import "bootstrap/mixins.less";
-
-// grid system and page structure
-@import "bootstrap/scaffolding.less";
-@import "bootstrap/grid.less";
-@import "bootstrap/layouts.less";
-
-// base CSS
 @import "bootstrap/type.less";
 @import "bootstrap/code.less";
 @import "bootstrap/forms.less";
 @import "bootstrap/tables.less";
 
-// components: Nav
-@import "bootstrap/navs.less";
-@import "bootstrap/pager.less";
-
-
-// local mixins
-// -------------------------------------------
-.side-icon(@blockSize: 40px) {
+// ------------------------------------------------
+// -- Defaults ------------------------------------
+* { // Apply a natural box layout model to all elements... see http://paulirish.com/2012/box-sizing-border-box-ftw
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+// For absolutely positioning elements within containers
+div, article, section, header, footer, nav, figure, li {
+  position: relative;
+}
+.container:after { // for clearing..
   display: block;
-  a.logo {
-    background-color: @grayDarker;
-    .border-radius((@blockSize + 10));
-    display: block;
-    height: @blockSize;
-    width: @blockSize;
-    font-family: @logoFont;
-    font-size: (@blockSize / 2);
-    color: @white;
-    position: relative;
-  }
+  height: 0;
+  clear: both;
+  content: ".";
+  visibility:hidden;
+}
+body { 
+  background: #fff; 
+  margin: 0px;
+}
+::-moz-selection { background: @highlight; color: #fff; }
+::selection { background: @highlight; color: #fff; }
+
+// -------------------------------------------------
+// -- Typography -----------------------------------
+html, input, textarea { // for webkit rendering
+  -webkit-font-smoothing: antialiased;
+}
+body { 
+  text-rendering: optimizeLegibility; // Turns on ligatures and kerning
+  -moz-font-feature-settings:"liga=1, dlig=1"; 
+  -ms-font-feature-settings:"liga", "dlig"; 
+  -o-font-feature-settings:"liga", "dlig"; 
+  -webkit-font-feature-settings:"liga", "dlig"; 
+  font-feature-settings:"liga", "dlig"; // For more refined (but less supported) ligature control
 }
 
-.set-typography {
-  font-family: @sansFontFamily;
-  font-size: 16px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 300;
-  line-height: 26px;
-  color: @gray;
-
-}
-.set-text-highlight {
-  background: @highlight;
-  color: #fff;
-  text-shadow: none;
-  font-weight: 100;
-}
-
-
-// custom header styles
-body { .set-typography; }
-h1 {
-  font-weight: 200;
-  color: @grayDarker;
-}
-.row { padding: 20px 0px 20px 0px; }
-a:hover { color: lighten(@pink, 10%); }
-
-// awesome pink highlight
-::-moz-selection { .set-text-highlight; }
-::selection { .set-text-highlight; }
-
-// header styles
-header.top-header {
-  padding-top: 40px;
-  span.icon-container {
-    .side-icon(40px);
-    margin-top: 23px;
-    span.icon-text {
-      position: absolute;
-      top: 13px;
-      left: 18px;
-      font-size: 26px;
-    }
-  }
-  .top-nav {
-    margin-top: 20px;
-    margin-left: -10px;
-    li {
-      a {
-        font-family: @sansFontFamily;
-        font-size: 16px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 300;
-        line-height: 26px;
-        color: @gray;
-        &:hover {
-          color: @black;
-        }
-      }
-    }
-  }
-}
-
-// article styles
-article {
-  margin-bottom: 30px;
-  header {
-    h1 {
-      a { 
-        color: @grayDarker;
-        &:hover {
-          color: @black;
-        }
-      }
-      span.small {
-        display: block;
-        font-size: 11px;
-      }
-    }
-  }
-  .icon-container {
-    display: block;
-    margin-top: 60px;
-    margin-left: 15px;
-    font-size: 22px;
-  }
-}
-
-// section styles
-section.side-icons {
+// -------------------------------------------------
+// -- Basic Layout ---------------------------------
+.sidebar-container {
+  background-color: @sideBg;
+  border-bottom: 1px solid darken(@sideBg, 10%);
+  padding: 10px 20px 10px 20px;
   overflow: hidden;
-  span.side-icon {
-    display: block;
-    width: 50%;
-    float: left;
-    margin-bottom: 10px;
-    span.icon {
-      display: block;
-      color: @black;
-      height: 30px;
-      width: 30px;
-      text-align: center;
-      float: left;
-      margin-right: 5px;
-    }
-    span.label {
-      font-size: 11px;
-      font-weight: bold;
-      line-height: 11px;
-      padding: 0px; 
+    nav {
+    ul {
       margin: 0px;
-      margin-top: 3px;
-      margin-bottom: -5px;
-      display: block;
-    }
-    span.link {
-      font-size: 11px;
-      line-hight: 11px;
       padding: 0px;
-      margin: 0px;
-      display: block;
+      list-style: none;
+      float: left;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      li.logo {
+        a {
+          display: block;
+          width: 60px;
+          margin: auto;
+          margin-bottom: 10px;
+        }
+      }
+      li {
+        display: inline;
+        a {
+          padding: 0px 10px 0px 10px;
+          display: inline;
+          text-decoration: none;
+          font-family: @sansFontFamily;
+          font-weight: 200;
+          color: @grayDarker;
+          &:hover {
+            font-weight: 400;
+            color: @black;
+          }
+        }
+      }
     }
-  } 
-}
-
-
-// footer style
-footer {
-  padding: 40px 0px 40px 0px;
-  p { 
-    font-size: 12px;
-    margin-left: -10px;
   }
 }
+.page-container { padding: 10%; }
+
+// --------------------------------------------------
+// -- Media Queries ---------------------------------
+@media screen and (min-width:720px) { 
+  html { padding: 0px; }
+  body { margin: 0px; }
+  div.fauxcolumn { 
+    bottom: 0; 
+    left: 0; 
+    position: fixed; 
+    top: 0; 
+    width: 200px;
+    background-color: @sideBg; 
+    border-right: 1px solid darken(@sideBg, 10%);
+  }
+  .sidebar-container {
+    background: none;
+    border-bottom: 0px;
+    float: left;
+    padding: 0px;
+    width: 200px;
+    text-align: right;
+    .sidebar-header {
+      padding-right: 10px;
+    }
+    nav {
+      ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        float: left;
+        width: 100%;
+        overflow: hidden;
+        text-align: right;
+        li.logo {
+          a {
+            display: block;
+            width: 190px;
+            margin: 0px;
+            margin-bottom: 10px;
+          }
+        }
+        
+        li {
+          display: block;
+          float: left;
+          a {
+            display: block;
+            width: 190px;
+            padding: 10px 0px 10px 0px;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+  .page-container {
+    float: left;
+    padding: 0px;
+    width: 68%;
+    article {
+      p {
+        padding-left: 170px;
+      }
+    }
+  }
+}
+/*
+@media screen and (min-width:1350px) {
+  html                        { padding: 0 16%; }
+  div.fauxcolumn              { width: 37.75%; }
+}
+
+@media screen and (min-width:1700px) {
+  html                        { padding: 0 23%; }
+  div.fauxcolumn              { width: 40.25%; }
+}
+
+@media screen and (min-width:2000px) { 
+  html                        { padding: 0 30%; }
+  div.fauxcolumn              { width: 42.85%; }
+}
+*/
