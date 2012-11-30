@@ -3,177 +3,47 @@
  */
 
 // ------------------------------------------------
-// -- Importing external files --------------------
-@import "bootstrap/reset.less";
-@import "variables.less";
-@import "bootstrap/mixins.less";
-@import "bootstrap/type.less";
-@import "bootstrap/code.less";
-@import "bootstrap/forms.less";
-@import "bootstrap/tables.less";
+// -- reseting styles -----------------------------
+@import "reset.less";
 
 // ------------------------------------------------
-// -- Defaults ------------------------------------
-* { // Apply a natural box layout model to all elements... see http://paulirish.com/2012/box-sizing-border-box-ftw
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-// For absolutely positioning elements within containers
-div, article, section, header, footer, nav, figure, li {
-  position: relative;
-}
-.container:after { // for clearing..
-  display: block;
-  height: 0;
-  clear: both;
-  content: ".";
-  visibility:hidden;
-}
-body { 
-  background: #fff; 
-  margin: 0px;
-}
-::-moz-selection { background: @highlight; color: #fff; }
-::selection { background: @highlight; color: #fff; }
+// -- variables and mixins ------------------------
+@import "variables.less";
+@import "mixins.less";
 
-// -------------------------------------------------
-// -- Typography -----------------------------------
-html, input, textarea { // for webkit rendering
-  -webkit-font-smoothing: antialiased;
-}
-body { 
-  text-rendering: optimizeLegibility; // Turns on ligatures and kerning
-  -moz-font-feature-settings:"liga=1, dlig=1"; 
-  -ms-font-feature-settings:"liga", "dlig"; 
-  -o-font-feature-settings:"liga", "dlig"; 
-  -webkit-font-feature-settings:"liga", "dlig"; 
-  font-feature-settings:"liga", "dlig"; // For more refined (but less supported) ligature control
+// ------------------------------------------------
+// -- typography ----------------------------------
+
+// ------------------------------------------------
+// -- layout --------------------------------------
+
+
+// -- print
+@media print {
+  @import "print.less";
 }
 
-// -------------------------------------------------
-// -- Basic Layout ---------------------------------
-.sidebar-container {
-  background-color: @sideBg;
-  border-bottom: 1px solid darken(@sideBg, 10%);
-  padding: 10px 20px 10px 20px;
-  overflow: hidden;
-    nav {
-    ul {
-      margin: 0px;
-      padding: 0px;
-      list-style: none;
-      float: left;
-      width: 100%;
-      overflow: hidden;
-      text-align: center;
-      li.logo {
-        a {
-          display: block;
-          width: 60px;
-          margin: auto;
-          margin-bottom: 10px;
-        }
-      }
-      li {
-        display: inline;
-        a {
-          padding: 0px 10px 0px 10px;
-          display: inline;
-          text-decoration: none;
-          font-family: @sansFontFamily;
-          font-weight: 200;
-          color: @grayDarker;
-          &:hover {
-            font-weight: 400;
-            color: @black;
-          }
-        }
-      }
-    }
-  }
-}
-.page-container { padding: 10%; }
-
-// --------------------------------------------------
-// -- Media Queries ---------------------------------
-@media screen and (min-width:720px) { 
-  html { padding: 0px; }
-  body { margin: 0px; }
-  div.fauxcolumn { 
-    bottom: 0; 
-    left: 0; 
-    position: fixed; 
-    top: 0; 
-    width: 200px;
-    background-color: @sideBg; 
-    border-right: 1px solid darken(@sideBg, 10%);
-  }
-  .sidebar-container {
-    background: none;
-    border-bottom: 0px;
-    float: left;
-    padding: 0px;
-    width: 200px;
-    text-align: right;
-    .sidebar-header {
-      padding-right: 10px;
-    }
-    nav {
-      ul {
-        margin: 0px;
-        padding: 0px;
-        list-style: none;
-        float: left;
-        width: 100%;
-        overflow: hidden;
-        text-align: right;
-        li.logo {
-          a {
-            display: block;
-            width: 190px;
-            margin: 0px;
-            margin-bottom: 10px;
-          }
-        }
-        
-        li {
-          display: block;
-          float: left;
-          a {
-            display: block;
-            width: 190px;
-            padding: 10px 0px 10px 0px;
-            padding-right: 20px;
-          }
-        }
-      }
-    }
-  }
-  .page-container {
-    float: left;
-    padding: 0px;
-    width: 68%;
-    article {
-      p {
-        padding-left: 170px;
-      }
-    }
-  }
-}
-/*
-@media screen and (min-width:1350px) {
-  html                        { padding: 0 16%; }
-  div.fauxcolumn              { width: 37.75%; }
+// 480px
+@media only screen and (min-width: 480px) {
+  
 }
 
-@media screen and (min-width:1700px) {
-  html                        { padding: 0 23%; }
-  div.fauxcolumn              { width: 40.25%; }
+// 600px
+@media only screen and (min-width: 600px) {
+
 }
 
-@media screen and (min-width:2000px) { 
-  html                        { padding: 0 30%; }
-  div.fauxcolumn              { width: 42.85%; }
+// 768px
+@media only screen and (min-width: 768px) {
+
 }
-*/
+
+// 992px
+@media only screen and (min-width: 992px) {
+  
+}
+
+// 1382px
+@media only screen and (min-width: 1382px) {
+
+}
