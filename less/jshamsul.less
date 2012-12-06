@@ -11,12 +11,101 @@
 @import "variables.less";
 @import "mixins.less";
 
+
 // ------------------------------------------------
 // -- typography ----------------------------------
 
 // ------------------------------------------------
 // -- layout --------------------------------------
-
+html, body {
+  margin: 0px;
+  padding: 0px;
+  color: @grayDarker;
+}
+.section-container {
+  padding: 10px 0px 10px 0px;
+  span.bold {
+    font-weight: 400;
+    color: @black;
+  }
+  .line-container {
+    overflow: hidden;
+    display: block;
+    line-height: 1.1;
+    width: 100%;
+    margin: 0px auto 20px;
+    padding-top: 30px;
+    position: relative;
+    left: auto;
+    top: auto;
+    text-align: center;
+    .line-content {
+      background-color: @white;
+      padding: 10px 15px 10px 15px;
+      color: @gray;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      font-size: 11px;
+      letter-spacing: 2px;
+      span.bold {
+        font-weight: 400;
+      }
+    }
+    .content-left {
+      float: left;
+      margin-left: 15px;
+    }
+    .content-right {
+      float: right;
+      margin-right: 15px;
+    }
+    .logo-name {
+      font-size: 14px;
+    }
+  }
+  .line-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid @grayLighter;
+    padding-top: 15px;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: -1;
+  }
+  .content-container {
+    padding: 0px 10px 0px 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    color: @gray;
+    letter-spacing: 1px;
+    line-height: 18px;
+    text-align: justify;
+    h1 {
+      a {
+        font-weight: 200;
+        color: @grayDarker;
+      }
+    }
+    a {
+      color: @black;
+      text-decoration: none;
+      font-weight: 400;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.top-navigation {
+  text-align: center;
+  a { 
+    
+  }
+}
 
 // -- print
 @media print {

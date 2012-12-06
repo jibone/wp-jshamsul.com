@@ -11,12 +11,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
-    <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul.css" rel="stylesheet">
+    
     <link href="<?php bloginfo('stylesheet_directory') ?>/css/icon-fonts.css" rel="stylesheet">
-    <!--[if IE 7]
-    <link href="<?php bloginfo('stylesheet_directory') ?>/css/icon-fonts-ie7.css" rel="stylesheet">
+    <link href="<?php bloginfo('stylesheet_directory') ?>/css/icon-fonts-codes.css" rel="stylesheet">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/icon-fonts-ie7.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/icon-fonts-ie7-codes.css">
     <![endif]-->
+    <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
     
     <link rel='alternate' type='application/rss+xml' title='<?php bloginfo('name'); ?> RSS Feed' href='' />
     <link rel='pingback' href='<?php bloginfo('pingback_url'); ?>' />
@@ -33,46 +36,46 @@
   </head>
   <body>
     
-    <div class="fauxcolumn"></div>
+    <div class="header-container section-container">
+      <div class="line-container">
+        <span class="line-content content-left logo-name"><span class="bold">js</span>hamsul.com</a></span>
+        <span class="line-content content-right"><i class="icon-home"></i></span>
+      </div>
+      <div class="content-container top-navigation">
+        <a href="/about"><span class="bold">A</span>bout</a>
+        <a href="/project"><span class="bold">P</span>rojects</a>
+        <a href="/contact"><span class="bold">C</span>ontact</a>
+      </div>
+    </div>
     
-    <!-- main container start -->
-    <section class="container">
-      <!-- sidebar container start -->
-      <section class="sidebar-container">
-        <nav>
-          <ul>
-            <li class="logo"><a href=""><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.gif"></a></li>
-            <li class="link"><a href="">About</a></li>
-            <li class="link"><a href="">Projects</a></li>
-            <li class="link"><a href="">Contact</a></li>
-          </ul>
-        </nav>
-      </section><!-- sidebar container ends -->
-      <!-- page container start -->
-      <section class="page-container">
-        <article>
-          <header class="article-header">
-            <h1>
-              <p>Hi, welcome.</p>
-              <p>My name is J.Shamsul Bahri.</p>
-            </h1>
-          </header>
-          <section class="article-content">
-            <p>I am a web producer based in Kuala Lumpur, Malaysia. I make websites for fun and 
-            profit. I also maintain and writes on jiboneus.com and wirawanweb.com.</a>
-            
-            <p>This is my website. I sometimes write about HTML5, CSS3, JavaScript and PHP, as 
-            well as anything else related to the web. Occasionally I do write things other than 
-            web development.</p>
-            
-            <p>Of course you can also find me on Twitter, Facebook, Tumblr, Google+ and 
-            many more.</p>
-            
-            <p><a href="">Read the blog &rarr;</a></p>
-          </section>
-        </article>
-      </section><!-- page container ends -->
-    </section><!-- main container ends -->
+    <div class="bio-container section-container">
+      <div class="line-container">
+        <span class="line-content content-left">Avatar</span>
+        <span class="line-content content-right">bla</span>
+      </div>
+      <div class="content-container">
+        <p>This is the website of J.Shamsul (@jibone), a web developer based in
+        Kuala Lumpur, Malaysia. He make websites for fun and profit, writes and 
+        manages <a href="http://jiboneus.com">jiboneus.com</a> and 
+        <a href="http://wirawanweb.com">wirawanweb.com</a>. Works at 
+        <a href="http://ezypzy.com">EzyPzy</a>.</p>
+      </div>
+    </div>
+    
+    <div class="post-container section-container">
+      <div class="line-container">
+        <span class="line-content content-left">Post</span>
+        <span class="line-content content-right">bla</span
+      </div>
+      <div class="content-container">
+        <h1><a href="">This is a title for the post</a></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a 
+        mi neque, sit amet adipiscing ipsum. Curabitur vitae nulla sapien, a mattis 
+        lectus. Sed adipiscing, quam gravida sollicitudin tristique, neque metus 
+        euismod felis, sed pellentesque risus nibh a urna.</p>
+        <p><a href="">Read more...</a></p>
+      </div>
+    </div>
     
     <?php wp_footer(); ?>
     
