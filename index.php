@@ -11,12 +11,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-    
-    <link href="<?php bloginfo('stylesheet_directory') ?>/css/icon-fonts.css" rel="stylesheet">
-    <link href="<?php bloginfo('stylesheet_directory') ?>/css/icon-fonts-codes.css" rel="stylesheet">
+    <link href="<?php bloginfo('stylesheet_directory') ?>/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul-icons.css" rel="stylesheet">
+    <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul-icons-codes.css" rel="stylesheet">
     <!--[if IE 7]>
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/icon-fonts-ie7.css">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/icon-fonts-ie7-codes.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/fontello-fonts-ie7.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/fontello-fonts-ie7-codes.css">
     <![endif]-->
     <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
@@ -35,47 +35,124 @@
     
   </head>
   <body>
+    <!-- page container start-->
+    <div class="page-container">
+      <!-- left container start -->
+      <div class="left-container clearfix">
+        <div class="logo-container">
+          <img src="<?php bloginfo('stylesheet_directory') ?>/img/logo.gif" alt="J Shamsul, Web Developer from Kuala Lumpur.">
+        </div>
+        <div class="navigation dropdown navi-dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Navigation <i class="icon-menu"></i></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li><a href="">Blog</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Project</a></li>
+            <li><a href="">Archive</a></li>
+          </ul>
+        </div>
+        <div class="navigation navi-links">
+          <ul class="menu-links">
+            <li><a href="">Blog</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Project</a></li>
+            <li><a href="">Archive</a></li>
+          </ul>
+        </div>
+
+      </div><!-- left container ends -->
+      
+      <!-- middle container start -->
+      <div class="middle-container">
+        
+        <?php if(have_posts()) : ?>
+          <?php while(have_posts()) : the_post(); ?>
+          
+          <div class="post-container">
+            <div class="post-meta">
+              <div class="post-date">
+                <span><?php the_time('j M Y'); ?></span>
+              </div>
+              <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+            </div>
+            <div class="post-content">
+            <?php 
+              if($pos = strpos($post->post_content, '<!--more-->')) :
+                the_content(__(''));
+              else :
+                echo get_first_paragraph();
+              endif;
+            ?>
+            <p><a href="<?php the_permalink(); ?>">Continue reading &rarr;</a></p>
+            </div>
+          </div>
+          
+          <?php endwhile; ?>
+        <?php else : ?>
+        <div class="post-container">
+          <div class="post-meta">
+            <h1>Error. Page Not Found.</h1>
+          </div>
+          <div class="post-content">
+            <p>Nothing to see here.</p>
+          </div>
+        </div>
+        <?php endif;?>
+
+      </div><!-- middle container ends -->
+      
+      <!-- right container start -->
+      <div class="right-container">
+        <!-- [TODO] widgetize this -->
+        <div class="socialicons">
+          <div class="socialicon-container">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/rss.png">
+            <span class="text">RSS Feed</span>
+            <span class="link"><a href="http://feeds.feedburner.com/jshamsulcom">subscribe</a></span>
+          </div>
+          <div class="socialicon-container">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png">
+            <span class="text">Twitter</span>
+            <span class="link"><a href="http://twitter.com/jibone">follow</a></span>
+          </div>
+          <div class="socialicon-container">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png">
+            <span class="text">RSS Feed</span>
+            <span class="link"><a href="http://facebook.com/jshamsul">friend</a></span>
+          </div>
+          <div class="socialicon-container">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/google.png">
+            <span class="text">Google+</span>
+            <span class="link"><a href="https://plus.google.com/110139302180508107868/">connect</a></span>
+          </div>
+          <div class="socialicon-container">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/tumblr.png">
+            <span class="text">Tumblr</span>
+            <span class="link"><a href="http://jibone.tumblr.com">reblog</a></span>
+          </div>
+          <div class="socialicon-container">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/flickr.png">
+            <span class="text">Flickr</span>
+            <span class="link"><a href="https://flickr.com/jibone">photos</a></span>
+          </div>
+          <div class="socialicon-container">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/mail.png">
+            <span class="text">Email</span>
+            <span class="link"><a href="http://facebook.com/jshamsul">contact</a></span>
+          </div>
+          <div class="socialicon-container">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/github.png">
+            <span class="text">Github</span>
+            <span class="link"><a href="https://github.com/jibone">code</a></span>
+          </div>
+        </div>
+      </div><!-- right container ends -->
+    </div><!-- page container ends -->
     
-    <div class="header-container section-container">
-      <div class="line-container">
-        <span class="line-content content-left logo-name"><span class="bold">js</span>hamsul.com</a></span>
-        <span class="line-content content-right"><i class="icon-home"></i></span>
-      </div>
-      <div class="content-container top-navigation">
-        <a href="/about"><span class="bold">A</span>bout</a>
-        <a href="/project"><span class="bold">P</span>rojects</a>
-        <a href="/contact"><span class="bold">C</span>ontact</a>
-      </div>
-    </div>
-    
-    <div class="bio-container section-container">
-      <div class="line-container">
-        <span class="line-content content-left">Avatar</span>
-        <span class="line-content content-right">bla</span>
-      </div>
-      <div class="content-container">
-        <p>This is the website of J.Shamsul (@jibone), a web developer based in
-        Kuala Lumpur, Malaysia. He make websites for fun and profit, writes and 
-        manages <a href="http://jiboneus.com">jiboneus.com</a> and 
-        <a href="http://wirawanweb.com">wirawanweb.com</a>. Works at 
-        <a href="http://ezypzy.com">EzyPzy</a>.</p>
-      </div>
-    </div>
-    
-    <div class="post-container section-container">
-      <div class="line-container">
-        <span class="line-content content-left">Post</span>
-        <span class="line-content content-right">bla</span
-      </div>
-      <div class="content-container">
-        <h1><a href="">This is a title for the post</a></h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a 
-        mi neque, sit amet adipiscing ipsum. Curabitur vitae nulla sapien, a mattis 
-        lectus. Sed adipiscing, quam gravida sollicitudin tristique, neque metus 
-        euismod felis, sed pellentesque risus nibh a urna.</p>
-        <p><a href="">Read more...</a></p>
-      </div>
-    </div>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/jquery-1.8.3.min.js"></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/bootstrap.min.js" ></script>
     
     <?php wp_footer(); ?>
     
