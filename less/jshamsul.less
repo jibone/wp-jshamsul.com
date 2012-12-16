@@ -36,6 +36,8 @@ html, body {
   font-size: 15px;
   line-height: 22px;
   -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  background-color: #f3f3f3;
 }
 pre, code, kbd, samp { font-family: $monospace; }
 a, a:active, a:visited { color: @link; text-decoration: none; }
@@ -57,8 +59,9 @@ a:hover, a:active { outline: none; }
 }
 
 .navigation-container {
+  background-color: #111;
   .section {
-    overflow: hidden;
+    .clearfix;
   }
   .logo-container {
     width: 40%;
@@ -67,10 +70,14 @@ a:hover, a:active { outline: none; }
     a {
       font-family: 'Raleway', @sansFontFamily;
       font-weight: 200;
-      color: @textColor;
+      color: @grayLighter;
       letter-spacing: 1px;
       &:hover {
         text-decoration: none;
+        font-weight: 400;
+        span.bold {
+          font-weight: 200;
+        }
       }
       span.bold {
         font-weight: 400;
@@ -81,6 +88,40 @@ a:hover, a:active { outline: none; }
     width: 55%;
     float: right;
     text-align: right;
+    a {
+      color: @grayLighter;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .dropdown-menu {
+      position: absolute;
+      top: 25px;
+      right: 0px;
+      a {
+        color: #111;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.info-container {
+  .clearfix;
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 10px;
+    img {
+      .border-radius(100px);
+    }
+  }
+  .blog-description {
+    font-size: 12px;
+    text-align: left;
   }
 }
 
