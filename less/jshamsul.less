@@ -69,15 +69,12 @@ a:hover, a:active { outline: none; }
     text-align: left;
     a {
       font-family: 'Raleway', @sansFontFamily;
-      font-weight: 200;
+      font-weight: 400;
       color: @grayLighter;
       letter-spacing: 1px;
       &:hover {
         text-decoration: none;
-        font-weight: 400;
-        span.bold {
-          font-weight: 200;
-        }
+        color: @white;
       }
       span.bold {
         font-weight: 400;
@@ -90,18 +87,38 @@ a:hover, a:active { outline: none; }
     text-align: right;
     a {
       color: @grayLighter;
+      font-family: 'Raleway', @sansFontFamily;
+      font-weight: 400;
+      letter-spacing: 1px;
+      i { 
+        font-size: 24px;
+        margin-top: -3px;
+        margin-right: 15px;
+      }
       &:hover {
         text-decoration: none;
+        color: @white;
       }
     }
-    .dropdown-menu {
-      position: absolute;
-      top: 25px;
-      right: 0px;
+  }
+}
+
+.menu-container {
+  .clearfix;
+  display: none;
+  ul {
+    list-style: none;
+    margin-left: 0px;
+    li {
+      text-align: center;
+      background-color: @grayDarker;
+      border-bottom: 1px solid lighten(@grayDarker, 10%);
       a {
-        color: #111;
+        color: @grayLighter;
+        display: block;
+        padding: 10px 20px 10px 20px;
         &:hover {
-          color: #fff;
+          text-decoration: none;
         }
       }
     }
@@ -122,6 +139,10 @@ a:hover, a:active { outline: none; }
   .blog-description {
     font-size: 12px;
     text-align: left;
+    letter-spacing: 1px;
+    p {
+      margin-bottom: 1px;
+    }
   }
 }
 
@@ -141,61 +162,12 @@ a:hover, a:active { outline: none; }
 
 // 768px
 @media only screen and (min-width: 768px) {
-  .left-container {
-    width: 8%;
-    float: left;
-    .logo-container {
-      width: 80px;
-      float: none;
-      text-align: center;
-      margin-top: 35px;
-    }
-    .navi-dropdown {
-      display: none;
-    }
-    .navi-links {
-      display: block;
-      ul.menu-links {
-        list-style: none;
-        padding-left: 0px;
-        margin-left: 0px;
-        text-align: left;
-        li {
-          margin-bottom: 10px;
-          a {
-            font-weight: bold;
-          }
-        }
-      }
-    }
-  }
-  .middle-container {
-    width: 54%;
-    float: left;
-  }
-  .right-container {
-    width: 20%;
-    float: right;
-  }
+
 }
 
 // 992px
 @media only screen and (min-width: 992px) {
-  .left-container {
-    width: 8%;
-    .logo-container {
-      img {
-        margin-left: 0px;
-      }
-    }
-  }
-  .middle-container {
-    float: left;
-    width: 56%;
-  }
-  .right-container {
-    width: 23%;
-  }
+
 }
 
 // 1382px

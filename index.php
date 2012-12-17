@@ -15,8 +15,8 @@
     <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul-icons.css" rel="stylesheet">
     <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul-icons-codes.css" rel="stylesheet">
     <!--[if IE 7]>
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/fontello-fonts-ie7.css">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/fontello-fonts-ie7-codes.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul-icons-ie7.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul-icons-ie7-codes.css">
     <![endif]-->
     <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
@@ -43,16 +43,19 @@
           <div class="logo-container">
             <a href=""><span class="bold">jS</span>hamsul.com</a>
           </div>
-          <div class="navigation dropdown">
-            <a href="#" class="dropdown-toggle" id="navi-drop" role="button" data-toggle="dropdown">Navigation <i class="icon-down-open-mini"></i></a>
-            <ul id="navi-menu" class="dropdown-menu" role="menu" ara-labelledby="navi-drop">
-              <li><a href="">About</a></li>
-              <li><a href="">Projects</a></li>
-              <li><a href="">Contact</a></li>
-            </ul>
+          <div class="navigation">
+            <a href="#" id="menu-btn">Menu <i class="icon-menu"></i></a>
           </div>
         </div>
       </div><!-- navigation container ends -->
+      <!-- navigation menu container start -->
+      <div class="menu-container">
+        <ul class="menu">
+          <li><a href="">About</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div><!-- navigation menu container ends -->
       
       <!-- content container start -->
       <div class="content-container">
@@ -63,10 +66,12 @@
               <img src="<?php bloginfo('stylesheet_directory'); ?>/img/profile-pic.jpg">
             </div>
             <div class="blog-description">
-              <p>This is the web home of J.Shamsul (@jibone), a web
-              developer based in Kuala Lumpur, Malaysia. He maintains
-              and writes on Jiboneus.com and Wirawanweb. Right now working
-              at EzyPzy.</p>
+              <p>My name is <strong>J.Shamsul Bahri</strong>. I am a <strong>web
+                developer</strong> based in Kuala Lumpur, Malaysia.</p>
+              <p>
+              <a href="https://twitter.com/jibone" class="twitter-follow-button" data-show-count="false">Follow @jibone</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              </p>
             </div>
           </div>
         </div><!-- info container ends -->
@@ -89,7 +94,8 @@
     </div><!-- page container ends -->
     
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/jquery-1.8.3.min.js"></script>
-    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/bootstrap.min.js" ></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/bootstrap.min.js" ></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jshamsul.js"></script>
     
     <?php wp_footer(); ?>
     
