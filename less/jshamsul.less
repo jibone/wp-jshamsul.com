@@ -146,6 +146,41 @@ a:hover, a:active { outline: none; }
   }
 }
 
+.loop-container {
+  .clearfix;
+  margin-top: 20px;
+  .post-container {
+    margin-bottom: 20px;
+    text-align: left;
+    .post-header {
+      padding: 0px 20px 0px 20px;
+      .post-date {
+        font-size: 12px;
+      }
+      h1 {
+        font-family: 'Raleway', @sansFontFamily;
+        font-weight: 400;
+        font-size: 32px;
+        letter-spacing: 1px;
+        line-height: 36px;
+        margin-top: -5px;
+        a {
+          color: @grayDarker;
+          &:hover {
+            text-decoration: none;
+            color: @black;
+          }
+        }
+      }
+    }
+    .post-body {
+      p {
+        padding: 10px 20px 10px 20px;
+      }
+    }
+  }
+}
+
 // -- print
 @media print {
 }
