@@ -77,29 +77,41 @@
         </div><!-- info container ends -->
         <!-- loop container start -->
         <div class="loop-container">
-          <div class="post-container">
-            <div class="post-header">
-              <div class="post-date">Monday, 23rd December 2012</div>
-              <h1><a href="">This is the post title</a></h1>
+            
+          <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+            
+            <!-- post container start -->
+            <div class="post-container">
+              <div class="post-header">
+                <div class="post-date"><?php the_time('j M Y'); ?></div>
+                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+              </div>
+              <div class="post-body">
+              
+              <?php 
+                if($pos = strpos($post->post_content, '<!--more-->')) : the_content(__(''));
+                else : echo get_first_paragraph();
+                endif;
+              ?>
+              
+              </div>
+            </div><!-- post container ends -->
+
+            <?php endwhile; ?>
+
+            <?php else : ?>
+            
+            <div class="post-container">
+              <div class="post-header">
+                <h1>Page Not Found. 404.</h1>
+              </div>
+              <div class="post-body">
+                <p>The page you are looking for could not be found. You might want to try the
+                <a href="/archive">archive</a>.</p>
+              </div>
             </div>
-            <div class="post-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt velit vitae nulla imperdiet vehicula. 
-              Sed quis sapien orci, a sollicitudin est. Vivamus in augue eu turpis interdum sodales ut ut lacus. Donec sit amet 
-              risus magna, sit amet mollis leo. Nunc porttitor luctus sapien eu dignissim. Mauris interdum pulvinar justo eu congue. 
-              Sed magna massa, varius in dictum ac, imperdiet sit amet lorem.</p> 
-              <p>Donec ante neque, rhoncus sed rhoncus eu, viverra vitae ante. Etiam tristique semper nibh, ac volutpat ligula 
-              blandit ac. Donec consequat, dolor sed ornare posuere, magna nisl bibendum nulla, ut pharetra arcu neque sed libero. Ut 
-              quis convallis ante. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quam 
-              augue, posuere a commodo adipiscing, eleifend sit amet nisi. Ut odio dui, semper vel mollis et, interdum id ante.</p>
-              <p>Nulla non odio sapien, sed commodo quam. Sed at enim leo, nec feugiat nunc. Sed felis nulla, aliquam et dictum in, 
-              mollis sed arcu. Quisque pretium sodales massa, eget sagittis risus imperdiet ac. Fusce mauris leo, venenatis eget 
-              tristique non, volutpat nec mauris. Vivamus erat quam, lobortis eget mattis sit amet, rhoncus non turpis. Duis mollis, 
-              leo id interdum viverra, sem orci bibendum turpis, eget egestas leo velit nec eros.</p>
-              <p>Curabitur pharetra condimentum pellentesque. Cras tempus lacinia scelerisque. Curabitur quis metus massa. Cras in 
-              imperdiet sapien. Duis vitae ante elit. Praesent dignissim, dui et mattis hendrerit, ligula lacus placerat turpis, vitae 
-              vestibulum leo sem sit amet turpis.</p>
-            </div>
-          </div>
+
+          <?php endif; ?>
         </div><!-- loop container ends -->
       </div><!-- content container ends -->
       

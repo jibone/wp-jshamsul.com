@@ -45,7 +45,7 @@ a:hover,a:active{outline:none;}
 .info-container .blog-description{font-size:12px;text-align:left;letter-spacing:1px;}.info-container .blog-description p{margin-bottom:1px;}
 .loop-container{*zoom:1;margin-top:20px;}.loop-container:before,.loop-container:after{display:table;content:"";line-height:0;}
 .loop-container:after{clear:both;}
-.loop-container .post-container{margin-bottom:20px;text-align:left;}.loop-container .post-container .post-header{padding:0px 20px 0px 20px;}.loop-container .post-container .post-header .post-date{font-size:12px;}
+.loop-container .post-container{margin-bottom:60px;text-align:left;}.loop-container .post-container .post-header{padding:0px 20px 0px 20px;}.loop-container .post-container .post-header .post-date{font-size:12px;}
 .loop-container .post-container .post-header h1{font-family:'Raleway',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;font-size:32px;letter-spacing:1px;line-height:36px;margin-top:-5px;}.loop-container .post-container .post-header h1 a{color:#222222;}.loop-container .post-container .post-header h1 a:hover{text-decoration:none;color:#000000;}
-.loop-container .post-container .post-body p{padding:10px 20px 10px 20px;}
+.loop-container .post-container .post-body{display:none;}.loop-container .post-container .post-body p{padding:10px 20px 10px 20px;}
 @media print{}@media only screen and (min-width:480px){}@media only screen and (min-width:600px){}@media only screen and (min-width:768px){}@media only screen and (min-width:992px){}@media only screen and (min-width:1382px){}
