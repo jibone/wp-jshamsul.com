@@ -47,22 +47,27 @@ a:hover, a:active { outline: none; }
 // -- pink highlight!!! :p
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
-
 .page-container {
   width: 100%;
   max-width: 960px;
   margin: auto;
 }
-
-.section {
-  padding: 15px;
+.section { padding: 15px; }
+.button {
+  padding: 10px 20px 10px 20px;
+  .border-radius(100px);
+  border: 1px solid @textcolor;
 }
-
+.item-container {
+  text-align: left;
+  p { padding: 10px 20px 10px 20px; }
+}
+.twitter-share-button {
+  width: 90px;
+}
 .navigation-container {
   background-color: #111;
-  .section {
-    .clearfix;
-  }
+  .section { .clearfix; }
   .logo-container {
     width: 40%;
     float: left;
@@ -150,7 +155,7 @@ a:hover, a:active { outline: none; }
   .clearfix;
   margin-top: 20px;
   .post-container {
-    margin-bottom: 60px;
+    margin-bottom: 25px;
     text-align: left;
     .post-header {
       padding: 0px 20px 0px 20px;
@@ -174,16 +179,78 @@ a:hover, a:active { outline: none; }
       }
     }
     .post-body {
+      p { padding: 10px 20px 10px 20px; }
+    }
+    .the-loop .post-body { display: none; }
+  }
+  .next-previous-container {
+    text-align: left;
+    p { padding: 10px 20px 10px 20px; }
+    span { display: block; }
+  }
+}
+.the-loop {
+  .post-container {
+    .post-body {
       display: none;
+    }
+  }
+}
+.single-post {
+  .post-container {
+    margin-bottom: 25px;
+    .post-body {
+      display: block;
       p {
-        padding: 10px 20px 10px 20px;
+        img.alignnone {
+          width: 100%;
+          height: auto;
+          
+        }
+      }
+    }
+  }
+  .share-container {
+    text-align: left;
+    margin-bottom: 25px;
+    span { 
+      display: block;
+      margin-bottom: 5px;
+    }
+    p { padding: 10px 20px 10px 20px; }
+  }
+}
+.sidebar-container {
+  overflow: hidden;
+  .sidebar-panel {
+    margin-bottom: 20px;
+    padding: 10px 20px 10px 20px;
+    .icons {
+      overflow: hidden;
+      width: 50%;
+      text-align: left;
+      float: left;
+      margin-bottom: 10px;
+      i.js-icon {
+        float: left;
+        font-size: 22px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+      }
+      span {
+        display: block;
+        font-size: 11px;
+        margin-bottom: -10px;
+      }
+      span.text {
+        font-weight: bold;
       }
     }
   }
 }
-
-// -- print
-@media print {
+.footer-container {
+  font-size: 11px;
 }
 
 // 480px
