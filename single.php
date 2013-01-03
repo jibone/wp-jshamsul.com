@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-  <body>
     <!-- page container start -->
     <div class="page-container">
       
@@ -10,12 +9,11 @@
       <div class="content-container">
         
         <?php get_template_part('content','single'); ?>
+        <?php get_sidebar(); ?>
+        <?php get_template_part('copyright'); ?>
         
       </div><!-- content container ends -->
       
-      <?php get_sidebar(); ?>
-      
     </div><!-- page container ends -->
-  </body>
 
 <?php get_footer(); ?>

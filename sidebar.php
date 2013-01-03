@@ -1,4 +1,3 @@
-
   <!-- sidebar container start -->
   <div class="sidebar-container">
     <div class="sidebar-panel social-icons">

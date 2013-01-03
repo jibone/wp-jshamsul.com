@@ -1,3 +1,4 @@
+<?php require 'lib/Nijikodo/Parser.php'; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
@@ -7,7 +8,7 @@
     
     <title><?php wp_title(' - ', true, 'right'); bloginfo('name'); ?></title>
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <meta name="description" content="">
     <meta name="author" content="">
     

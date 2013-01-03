@@ -36,7 +36,7 @@
       <p>
       <span class="previous"><?php previous_post_link('Previous: %link'); ?></span>
       <span class="next"><?php next_post_link('Next: %link'); ?></span>
-      <span class="home">Home: <a href="/">Back to blog</a> &rarr;</div>
+      <span class="home">Home: <a href="/">Back to blog</a> &rarr;</span>
       </p>
     </div><!-- next previous container ends -->
     

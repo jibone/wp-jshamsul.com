@@ -9,9 +9,23 @@
         <a href="#" id="menu-btn">Menu <i class="js-icon-menu"></i></a>
       </div>
     </div>
+    <div class="section full-menu-container">
+      <?php wp_nav_menu(array(
+        'theme_location' => 'header_navigation',
+        'menu' => 'blog',
+        'container' => false,
+        'items_wrap' => '<ul id="%1$s" class="full-menu">%3$s</ul>'
+      )); ?>
+    </div>
   </div><!-- navigation container ends -->
   <!-- navigation menu container start -->
   <div class="menu-container">
+    <?php wp_nav_menu(array(
+      'theme_location'  => 'header_navigation',
+      'menu'            => 'blog',
+      'container'       => false,
+      'items_wrap'      => '<ul id="%1$s" class="menu">%3$s</ul>'
+    ));?>
     <ul class="menu">
       <li><a href="">About</a></li>
       <li><a href="">Projects</a></li>

@@ -38,6 +38,7 @@ a:hover,a:active{outline:none;}
 .navigation-container .logo-container a span.bold{font-weight:400;}
 .navigation-container .navigation{width:55%;float:right;text-align:right;}.navigation-container .navigation a{color:#eeeeee;font-family:'Raleway',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;letter-spacing:1px;}.navigation-container .navigation a i{font-size:24px;margin-top:-3px;margin-right:15px;}
 .navigation-container .navigation a:hover{text-decoration:none;color:#ffffff;}
+.navigation-container .full-menu-container{display:none;}
 .menu-container{*zoom:1;display:none;}.menu-container:before,.menu-container:after{display:table;content:"";line-height:0;}
 .menu-container:after{clear:both;}
 .menu-container ul{list-style:none;margin-left:0px;}.menu-container ul li{text-align:center;background-color:#222222;border-bottom:1px solid #3c3c3c;}.menu-container ul li a{color:#eeeeee;display:block;padding:10px 20px 10px 20px;}.menu-container ul li a:hover{text-decoration:none;}
@@ -61,4 +62,15 @@ a:hover,a:active{outline:none;}
 .sidebar-container .sidebar-panel .icons span{display:block;font-size:11px;margin-bottom:-10px;}
 .sidebar-container .sidebar-panel .icons span.text{font-weight:bold;}
 .footer-container{font-size:11px;}
-@media only screen and (min-width:480px){}@media only screen and (min-width:600px){}@media only screen and (min-width:768px){}@media only screen and (min-width:992px){}@media only screen and (min-width:1382px){}
+.niji_code{font-family:'monaco',courier,monospace;font-size:11.5px;overflow:auto;margin-top:10px;margin-bottom:10px;padding:10px 20px 10px 20px;background:#03050A;color:#fff;white-space:pre;line-height:10px;}
+.niji_code em{font-style:italic;}
+.niji_html{color:#7F90AA;}
+.niji_keyword,.niji_define{color:#FBDE2D;}
+.niji_int,.niji_constant{color:#D8FA3C;}
+.niji_comment{color:#A5A6A7;}
+.niji_class,.niji_function{color:#8DA6CE;}
+.niji_string{color:#61CE3C;}
+.niji_default{color:#fff;}
+.niji_tag{color:#7F90AA;}
+.niji_method{color:#FF6400;}
+@media only screen and (min-width:480px){}@media only screen and (min-width:600px){}@media only screen and (min-width:768px){.page-container{background-color:#111;*zoom:1;}.page-container:before,.page-container:after{display:table;content:"";line-height:0;} .page-container:after{clear:both;} .page-container .navigation-container{width:15%;float:left;}.page-container .navigation-container .logo-container{padding-left:0px;} .page-container .navigation-container .navigation #menu-btn{display:none;} .page-container .navigation-container .full-menu-container{display:block;}.page-container .navigation-container .full-menu-container ul.full-menu{list-style:none;margin:0px;}.page-container .navigation-container .full-menu-container ul.full-menu li a{display:block;text-align:left;padding:10px 0px 10px 0px;color:#f3f3f3;font-weight:200;letter-spacing:1px;}.page-container .navigation-container .full-menu-container ul.full-menu li a:hover{text-decoration:none;} .page-container .content-container{width:83%;float:right;background-color:#f3f3f3;}.page-container .content-container .post-container .post-header h1{font-size:22px;line-height:28px;margin-bottom:0px;} .page-container .content-container .post-container .post-body p.continue{margin-top:-25px;} .page-container .content-container .the-loop .post-body{display:block;} .sidebar-container{margin-top:15px;}}@media only screen and (min-width:992px){}@media only screen and (min-width:1382px){}

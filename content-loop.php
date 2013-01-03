@@ -13,11 +13,11 @@
         <div class="post-body">
         
         <?php
-          if($pos = strpos($post->post_content, '<!--more-->')) : the_content(__('Continue Reading &rarr;'));
+          if($pos = strpos($post->post_content, '<!--more-->')) : the_content(__(''));
           else : echo get_first_paragraph();
           endif;
         ?>
-        
+        <p class="continue"><a href="<?php the_permalink(); ?>">Continue Reading</a> &rarr;</p>
         </div>
       </div><!-- post container ends -->
       

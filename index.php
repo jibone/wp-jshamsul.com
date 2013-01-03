@@ -33,10 +33,10 @@
         </div><!-- info container ends -->
         
         <?php get_template_part('content','loop'); ?>
-      
+        <?php get_sidebar(); ?>
+        <?php get_template_part('copyright'); ?>
+        
       </div><!-- content container ends -->
-      
-      <?php get_sidebar(); ?>
       
     </div><!-- page container ends -->
     
