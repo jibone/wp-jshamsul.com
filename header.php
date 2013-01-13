@@ -12,6 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
     <link href="<?php bloginfo('stylesheet_directory') ?>/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul-icons.css" rel="stylesheet">
     <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul-icons-codes.css" rel="stylesheet">
@@ -20,7 +21,6 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul-icons-ie7-codes.css">
     <![endif]-->
     <link href="<?php bloginfo('stylesheet_directory') ?>/css/jshamsul.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
     
     <link rel='alternate' type='application/rss+xml' title='<?php bloginfo('name'); ?> RSS Feed' href='' />
     <link rel='pingback' href='<?php bloginfo('pingback_url'); ?>' />
